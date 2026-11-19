@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f34">
+  <meta name="description" content="Xtables: MultipliNova - a space adventure for mastering times tables, division and the Year 4 Multiplication Tables Check.">
+  <title>Xtables: MultipliNova | Times Tables Space Adventure</title>
+  <style>
+    :root {
+      --navy: #080f34;
+      --blue: #152c73;
+      --cyan: #55e5ff;
+      --gold: #ffd75a;
+      --white: #f6f8ff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(ellipse at 12% 12%, #304cb3 0%, transparent 35%),
+        radial-gradient(ellipse at 85% 30%, #5c238e 0%, transparent 32%),
+        linear-gradient(160deg, #080f34, #101b51 55%, #070b26);
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .4;
+      background-image: radial-gradient(#fff 1px, transparent 1px);
+      background-size: 47px 47px;
+    }
+    a { color: var(--cyan); }
+    header {
+      position: relative;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      background: #080e2dd9;
+      border-bottom: 1px solid #5b74b866;
+    }
+    .brand {
+      color: var(--gold);
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 15px; }
+    nav a { color: white; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: var(--gold); }
+    main, footer { position: relative; }
+    .hero {
+      text-align: center;
+      padding: 85px 20px 65px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 18px;
+      border: 1px solid #67e8ff80;
+      border-radius: 30px;
+      color: var(--cyan);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: .85rem;
+    }
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.6rem);
+      line-height: 1.08;
+      margin: 25px 0 18px;
+      color: var(--gold);
+      text-shadow: 0 4px 0 #8143b8, 0 0 30px #538aff66;
+    }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 1.25rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #ffe777, #ffac39);
+      color: #151c4b;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 6px 22px #ffbb4870;
+    }
+    section { padding: 55px 6%; max-width: 1200px; margin: auto; }
+    h2 {
+      text-align: center;
+      color: var(--gold);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin: 0 0 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card, .panel {
+      background: #13245cbf;
+      border: 1px solid #6b95e26e;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px #0003;
+    }
+    .card h3 { color: var(--cyan); margin: 8px 0; }
+    .card p { margin-bottom: 0; }
+    .emoji { font-size: 2.4rem; }
+    .panel { max-width: 900px; margin: auto; }
+    .panel h3 { color: var(--cyan); margin-top: 24px; }
+    .panel h3:first-child { margin-top: 0; }
+    .panel p { margin: 10px 0; }
+    footer {
+      text-align: center;
+      padding: 30px 20px 45px;
+      border-top: 1px solid #6b95e250;
+      color: #c7d5ff;
+    }
+    footer a { margin: 0 8px; }
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; }
+      .hero { padding-top: 60px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#home">🚀 Xtables: MultipliNova</a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#parents">For Parents</a>
+      <a href="#support">Support</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="home">
+      <span class="eyebrow">The Ultimate Times Tables Space Adventure</span>
+      <h1>Xtables:<br>MultipliNova</h1>
+      <p>Blast off into a colourful universe where children build times tables confidence, explore the Solar System and become maths superstars!</p>
+      <a class="button" href="#features">Explore the Adventure ✨</a>
+    </div>
+
+    <section id="features">
+      <h2>🌟 A Galaxy of Learning Adventures</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="emoji">✖️</div>
+          <h3>Three Ways to Master Maths</h3>
+          <p>Practise multiplication, division and missing-number questions through fun, customisable missions.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">⏱️</div>
+          <h3>Year 4 MTC Practice</h3>
+          <p>Prepare for the Multiplication Tables Check with 25 questions and six seconds per question.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🪐</div>
+          <h3>Explore the Solar System</h3>
+          <p>Travel between space destinations, discover fascinating facts and take space quizzes.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">👩‍🚀</div>
+          <h3>Customise Your Astronaut</h3>
+          <p>Create your own space explorer with different faces, hairstyles, spacesuits, helmets and accessories.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🏆</div>
+          <h3>Stars, Rewards and Certificates</h3>
+          <p>Earn stars, reach new ranks, celebrate achievements and collect certificates as you progress.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🚀</div>
+          <h3>Bonus Rocket Mini-Game</h3>
+          <p>Enjoy a bonus space-flight challenge alongside your maths adventures.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">📊</div>
+          <h3>Mastery Progress Grids</h3>
+          <p>See which times tables are becoming stronger and which ones need more practice.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">👨‍👩‍👧‍👦</div>
+          <h3>Six Player Profiles</h3>
+          <p>Up to six players can enjoy their own progress, stars and personalised space adventure on one device.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="parents">
+      <h2>💫 Made for Children. Helpful for Parents.</h2>
+      <div class="panel">
+        <p>MultipliNova makes times tables practice feel like an adventure while giving parents a clear picture of their child's learning.</p>
+        <p>Choose the times tables to practise, set question timers, review progress and help children develop faster, more confident recall.</p>
+        <p>The Parents Dashboard provides progress information, mastery grids and a weekly summary. Children can also practise at their own pace without a time limit.</p>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2>🛠️ Support</h2>
+      <div class="panel">
+        <p>Need help with Xtables: MultipliNova, have a question or want to report a problem?</p>
+        <p>Email our support team:</p>
+        <p><strong><a href="mailto:multiplinovasupport@gmail.com">multiplinovasupport@gmail.com</a></strong></p>
+        <p>Please include a brief description of the issue and the device you are using. Do not include children's personal information.</p>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <h2>🔒 Privacy Policy</h2>
+      <div class="panel">
+        <p><strong>Last updated:</strong> 19 November 2026</p>
+        <p>This privacy policy explains how Xtables: MultipliNova handles information when you use the app.</p>
+
+        <h3>Information stored on your device</h3>
+        <p>Player profiles, names, game progress, scores, stars, achievements and customisation choices are stored locally on the device. This information is used to provide the game's features and retain player progress.</p>
+
+        <h3>Information sent to external servers</h3>
+        <p>MultipliNova does not send player profiles or game progress to external servers. The app does not require children to create an online account.</p>
+
+        <h3>Advertising and tracking</h3>
+        <p>MultipliNova does not use player information for targeted advertising or tracking.</p>
+
+        <h3>Sharing information</h3>
+        <p>We do not sell or share locally stored player profiles or game progress with third parties.</p>
+
+        <h3>Deleting local information</h3>
+        <p>Player information is stored on the device. Removing the app may delete its locally stored information, subject to the device's storage and backup settings.</p>
+
+        <h3>Contacting support</h3>
+        <p>If you email us for support, we receive the information you choose to include in your message, such as your email address and the details of your enquiry. We use this information to respond to your request.</p>
+
+        <h3>Children's privacy</h3>
+        <p>MultipliNova is designed for children's educational use. Children do not need to provide contact details or create an online account to play.</p>
+
+        <h3>Contact</h3>
+        <p>For privacy questions, email <a href="mailto:multiplinovasupport@gmail.com">multiplinovasupport@gmail.com</a>.</p>
+
+        <h3>Changes to this policy</h3>
+        <p>We may update this policy if the app or its data practices change. The updated policy will be published on this page.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🚀 Xtables: MultipliNova</p>
+    <p>Practice • Discover • Quiz • Progress</p>
+    <p><a href="#support">Support</a> | <a href="#privacy">Privacy Policy</a></p>
+    <p>© 2026 Xtables: MultipliNova. All rights reserved.</p>
+  </footer>
+</body>
+</html>
